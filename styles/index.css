@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500&family=Roboto+Slab&display=swap');
+
 @tailwind base;
 
 /* Write your own custom base styles here */
@@ -9,6 +11,22 @@
 /* Write you own custom component styles here */
 .btn-blue {
   @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+}
+.bg-gradient-home {
+  background: radial-gradient(50% 50% at 50% 50%, #06CCFF 0%, #0077FF 100%);
+}
+.text-highlight {
+  background: linear-gradient(90deg, #0077FF 0%, #06CCFF 100%);
+  background-clip: text;
+  color: transparent;
+}
+.hide-scroll::-webkit-scrollbar {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  display: none;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 /* Start purging... */
