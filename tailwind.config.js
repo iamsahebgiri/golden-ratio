@@ -56,7 +56,9 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    transitionProperty: ['responsive', 'motion-safe', 'motion-reduce'],
+  },
   plugins: [],
   future: {
     removeDeprecatedGapUtilities: true,

@@ -8,7 +8,7 @@ export default function Facts() {
         <span className="text-highlight"> Facts </span>
         about Phi
       </div>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 px-4 mt-5 overflow-x-scroll hide-scroll ">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 px-4 mt-8 overflow-x-scroll hide-scroll ">
         <div className="p-5 pb-8 bg-red-brand rounded-lg">
           <div className="flex flex-row-reverse">
             <RiQuestionFill color="#FFF" size="32" />

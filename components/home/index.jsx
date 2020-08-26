@@ -4,9 +4,9 @@ import Nav from '../nav';
 
 export default function index() {
   return (
-    <div className="bg-gradient-home py-48 mb-12 md:h-screen md:p-0 flex flex-col justify-between">
+    <div className="bg-gradient-home mb-16 md:h-screen md:p-0 flex flex-col justify-between">
       <Nav />
-      <div className="h-full flex items-center justify-center">
+      <div className="h-full flex items-center justify-center py-20 md:py-0">
         <div className="flex flex-col items-center">
           <h1 className="font-bold text-5xl md:text-7xl font-heading text-center text-white">
             Golden Ratio
@@ -17,7 +17,7 @@ export default function index() {
         </div>
       </div>
       <div className="w-full flex items-center justify-center py-4">
-        <FiChevronDown color="#FFF" size="48" />
+        <FiChevronDown className="animate-bounce" color="#FFF" size="48" />
       </div>
     </div>
   );

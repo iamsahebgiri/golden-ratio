@@ -21,7 +21,7 @@ export default function index() {
         <span className="text-highlight"> Ratio </span>
         Sets
       </div>
-      <div className="flex px-4 mt-5 overflow-x-scroll hide-scroll">
+      <div className="flex px-4 mt-8 overflow-x-scroll hide-scroll">
         {set(8)}
       </div>
     </div>

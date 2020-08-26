@@ -1,7 +1,7 @@
 export default function Section({ leadingTitle, highlight, children }) {
   return (
     <div className="container mx-auto mb-12 md:mb-10 md:px-8">
-      <div className="font-heading leading-snug text-3xl md:text-4xl font-semibold capitalize px-4 text-neutral">
+      <div className="font-heading leading-10 text-3xl tracking-tight md:text-4xl font-semibold capitalize px-4 text-neutral">
         { leadingTitle }
         {' '}
         <span className="text-highlight">

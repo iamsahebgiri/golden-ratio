@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500&family=Roboto+Slab&display=swap');
 
+@use "@material/drawer";
+@use "@material/list";
+
+@include drawer.core-styles;
+@include list.core-styles;
+
 @tailwind base;
 
 /* Write your own custom base styles here */
@@ -27,6 +33,9 @@
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+.font-numeric {
+  font-variant-numeric: tabular-nums;
 }
 
 /* Start purging... */

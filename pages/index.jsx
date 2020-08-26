@@ -2,6 +2,7 @@ import Section from '../components/section';
 import Facts from '../components/facts';
 import Sets from '../components/sets';
 import Home from '../components/home';
+import Fibonacci from '../components/fibonacci';
 
 export default function IndexPage() {
   return (
@@ -54,6 +55,7 @@ export default function IndexPage() {
           spiral.
         </p>
       </Section>
+      <Fibonacci />
     </div>
   );
 }
