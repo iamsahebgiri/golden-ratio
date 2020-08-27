@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import Link from 'next/link';
 import {
   FiMenu, FiBox, FiCommand, FiFile,
 } from 'react-icons/fi';
+import Logo from '../logo';
 
 export default class index extends Component {
   constructor(props) {
@@ -27,14 +29,8 @@ export default class index extends Component {
   render() {
     return (
       <nav>
-        <div className="max-w-7xl mx-auto py-6 px-6 md:px-8 flex items-center justify-between">
-          <div className="h-10 px-6 bg-white font-bold text-xl rounded-lg flex items-center justify-center">
-            <span className="text-highlight">
-              Golden
-            </span>
-            Ratio
-            <span className="text-green-500">.</span>
-          </div>
+        <div className="max-w-7xl mx-auto p-3 md:px-8 flex items-center justify-between">
+          <Logo />
           <div
             onClick={this.togglePanel}
             onKeyPress={this.togglePanel}
@@ -46,13 +42,19 @@ export default class index extends Component {
           </div>
           <ul className="hidden md:flex">
             <li>
-              <a href="/" className="ml-4 px-3 py-2 rounded-md text-sm font-normal leading-5 text-gray-300 hover:text-white hover:bg-white hover:bg-opacity-25 focus:outline-none focus:text-white focus:bg-gray-200 transition duration-150 ease-in-out">Illustrations</a>
+              <Link href="/illustrations">
+                <a href="/illustrations" className="ml-4 px-3 py-2 rounded-md text-sm font-medium  leading-5 text-gray-300 hover:text-white hover:bg-white hover:bg-opacity-25 focus:outline-none  transition duration-150 ease-in-out">Illustrations</a>
+              </Link>
             </li>
             <li>
-              <a href="/" className="ml-4 px-3 py-2 rounded-md text-sm font-normal leading-5 text-gray-300 hover:text-white hover:bg-white hover:bg-opacity-25 focus:outline-none focus:text-white focus:bg-gray-200 transition duration-150 ease-in-out">My App</a>
+              <Link href="/app">
+                <a href="/app" className="ml-4 px-3 py-2 rounded-md text-sm font-medium  leading-5 text-gray-300 hover:text-white hover:bg-white hover:bg-opacity-25 focus:outline-none  transition duration-150 ease-in-out">My App</a>
+              </Link>
             </li>
             <li>
-              <a href="/" className="ml-4 px-3 py-2 rounded-md text-sm font-normal leading-5 text-gray-300 hover:text-white hover:bg-white hover:bg-opacity-25 focus:outline-none focus:text-white focus:bg-gray-200 transition duration-150 ease-in-out">Bibliography</a>
+              <Link href="/credits">
+                <a href="/credits" className="ml-4 px-3 py-2 rounded-md text-sm font-medium  leading-5 text-gray-300 hover:text-white hover:bg-white hover:bg-opacity-25 focus:outline-none  transition duration-150 ease-in-out">Credits</a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -84,22 +86,28 @@ export default class index extends Component {
                       <div className="h-full">
                         <ul className="flex flex-col">
                           <li className="flex-1">
-                            <a className="flex items-center border border-blue-brand rounded py-2 px-4 bg-blue-brand hover:bg-blue-700 text-white" href="/">
-                              <FiBox size="21" className="mr-2" />
-                              Illustrations
-                            </a>
+                            <Link href="/illustrations">
+                              <a className="flex items-center border border-blue-brand rounded py-2 px-4 bg-blue-brand hover:bg-blue-700 text-white" href="/illustrations">
+                                <FiBox size="21" className="mr-2" />
+                                Illustrations
+                              </a>
+                            </Link>
                           </li>
                           <li className="flex-1">
-                            <a className="flex items-center border border-white rounded hover:border-gray-200 text-blue-500 hover:bg-gray-200 py-2 px-4" href="/">
-                              <FiCommand size="21" className="mr-2" />
-                              My App
-                            </a>
+                            <Link href="/app">
+                              <a className="flex items-center border border-white rounded hover:border-gray-200 text-blue-500 hover:bg-gray-200 py-2 px-4" href="/app">
+                                <FiCommand size="21" className="mr-2" />
+                                My App
+                              </a>
+                            </Link>
                           </li>
                           <li className="flex-1">
-                            <a className="flex items-center border border-white rounded hover:border-gray-200 text-blue-500 hover:bg-gray-200 py-2 px-4" href="/">
-                              <FiFile size="21" className="mr-2" />
-                              Bibliography
-                            </a>
+                            <Link href="/credits">
+                              <a className="flex items-center border border-white rounded hover:border-gray-200 text-blue-500 hover:bg-gray-200 py-2 px-4" href="/credits">
+                                <FiFile size="21" className="mr-2" />
+                                Credits
+                              </a>
+                            </Link>
                           </li>
                         </ul>
                       </div>

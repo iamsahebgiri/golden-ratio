@@ -16,7 +16,7 @@ export default function index() {
 
   return (
     <div className="container mx-auto mb-12 md:mb-16 md:p-8">
-      <div className="font-heading leading-tight text-3xl md:text-4xl font-semibold capitalize px-4 text-neutral">
+      <div className="font-heading leading-10 text-3xl md:text-4xl font-semibold capitalize px-4 text-neutral">
         Frequently used
         <span className="text-highlight"> Ratio </span>
         Sets
