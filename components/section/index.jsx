@@ -1,4 +1,6 @@
-export default function Section({ leadingTitle, highlight, children }) {
+export default function Section({
+  leadingTitle, highlight, children, imgSrc,
+}) {
   return (
     <div className="container mx-auto mb-12 md:mb-10 md:px-8">
       <div className="font-heading leading-10 text-3xl tracking-tight md:text-4xl font-semibold capitalize px-4 text-neutral">
@@ -13,7 +15,9 @@ export default function Section({ leadingTitle, highlight, children }) {
           { children }
         </div>
         <div className="w-full px-4 md:w-2/6">
-          <div className="h-48 bg-gray-300 rounded-lg"> </div>
+          <div className="max-h-full bg-blue-brand rounded-lg">
+            <img className="rounded-lg" src={imgSrc} alt="Golden Raio" />
+          </div>
         </div>
       </div>
     </div>

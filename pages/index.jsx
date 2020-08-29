@@ -3,12 +3,13 @@ import Facts from '../components/facts';
 import Sets from '../components/sets';
 import Home from '../components/home';
 import Fibonacci from '../components/fibonacci';
+import Spiral from '../components/spiral';
 
 export default function IndexPage() {
   return (
     <div>
       <Home />
-      <Section leadingTitle="Golden ratio" highlight="overview" trailingTitle="" img="">
+      <Section leadingTitle="Golden ratio" highlight="overview" trailingTitle="" imgSrc="./golden_ratio.png">
         <p className="mb-4 leading-relaxed">
           What makes a single number so interesting that ancient Greeks,
           Renaissance artists, a 17th century astronomer and a 21st century
@@ -25,7 +26,7 @@ export default function IndexPage() {
         </p>
       </Section>
       <Sets />
-      <Section leadingTitle="Golden ratio and" highlight="Mathematics" trailingTitle="" img="">
+      <Section leadingTitle="Golden ratio and" highlight="Mathematics" trailingTitle="" imgSrc="./golden_ratio_math.png">
         <p className="mb-4">
           This Golden Ratio truly is unique in its mathematical properties
           and pervasive in its appearance throughout nature. Where Pi (3.14)
@@ -33,15 +34,21 @@ export default function IndexPage() {
           or Φ (1.618) is the Golden Ratio that results when a line is
           divided in one very special and unique way.
         </p>
-        <p>
+        <p className="mb-4">
           Two quantities are in the golden ratio if their ratio is the same
           as the ratio of their sum to the larger of the two quantities. The
           irrational number (1 + √5)/2, often denoted by the Greek letter ϕ
           or τ, which is approximately equal to 1.618 is golden ratio.
         </p>
+        {/* <p className="mb-4">
+          Golden Ratio can be written in many forms. Here are few of them -
+          <img className="" src="./eqs/eq_1.svg" alt="Equation one" />
+          <img src="./eqs/eq_2.svg" alt="Equation one" />
+          <img src="./eqs/eq_3.svg" alt="Equation one" />
+        </p> */}
       </Section>
       <Facts />
-      <Section leadingTitle="Golden Spiral and" highlight="Nature" trailingTitle="" img="">
+      <Section leadingTitle="Golden Spiral and" highlight="Nature" trailingTitle="" imgSrc="./golden_ratio_math.png">
         <p className="mb-4">
           A golden spiral can be approximated by first starting with a
           rectangle for which the ratio between its length and width is the
@@ -56,6 +63,7 @@ export default function IndexPage() {
         </p>
       </Section>
       <Fibonacci />
+      <Spiral />
     </div>
   );
 }

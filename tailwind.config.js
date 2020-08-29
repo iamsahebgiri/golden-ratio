@@ -10,6 +10,8 @@ module.exports = {
         'blue-brand': '#0077FF',
         'purple-brand': '#844CFE',
         'green-brand': '#02CC89',
+        'neutral-brand': '#F9FAFF',
+        'black-brand': '#2B2B2B',
       },
       fontFamily: {
         sans: [
@@ -58,6 +60,7 @@ module.exports = {
   },
   variants: {
     transitionProperty: ['responsive', 'motion-safe', 'motion-reduce'],
+    backgroundColor: ['responsive', 'hover', 'focus', 'checked'],
   },
   plugins: [],
   future: {

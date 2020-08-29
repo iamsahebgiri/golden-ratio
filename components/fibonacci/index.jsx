@@ -35,10 +35,10 @@ export default function index() {
         Sequence
       </div>
       <div className="px-4 flex flex-col md:flex-row ">
-        <div className="w-full flex flex-col p-2 md:w-2/3 bg-gray-100  mr-2 font-semibold font-heading text-3xl border-gray-300 rounded border-2 text-neutral">
+        <div className="w-full flex flex-col p-4 md:w-2/3 bg-gray-100  mr-2 font-semibold font-heading text-3xl border-gray-300 rounded border-2 text-neutral">
           <div className="flex items-center justify-between">
             <div>
-              <svg
+              {/* <svg
                 className="h-6 w-6"
                 width="36"
                 height="38"
@@ -53,7 +53,7 @@ export default function index() {
                 />
                 <circle cx="18" cy="5" r="5" fill="#0077FF" />
                 <circle cx="18" cy="33" r="5" fill="#0077FF" />
-              </svg>
+              </svg> */}
             </div>
             <div>
               <div>{prevTerm}</div>
@@ -66,8 +66,11 @@ export default function index() {
             {goldenRatio}
           </div>
         </div>
-        <div className="w-full mt-2 md:mt-0 p-2 md:w-1/3 border-gray-300 rounded border-2 bg-gray-100">
-          <p className="font-medium text-base text-neutral">Slider</p>
+        <div className="w-full mt-2 md:mt-0 p-4 md:w-1/3 border-gray-300 rounded border-2 bg-gray-100">
+          <div className="flex justify-between font-medium text-base text-neutral">
+            <p>Slider</p>
+            <p>{value}</p>
+          </div>
           <Range
             step={step}
             value={value}
