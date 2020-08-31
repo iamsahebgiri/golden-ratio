@@ -54,7 +54,6 @@ window.fetch = async (...args) => {
   }
 };
 
-// eslint-disable-next-line func-names
-export default function () {
+export default function index() {
   return null;
 }

@@ -3,12 +3,12 @@ import useSWR from 'swr';
 import fetcher from '../utils/fetcher';
 import Nav from '../components/nav';
 
-function Pill({ text, onClick }) {
+function Pill({ text, onClick, isSelected }) {
   return (
     <button
       type="button"
       onClick={onClick}
-      className="bg-gray-700 outline-none mr-3 rounded-full px-5 py-2 inline-block font-medium text-white"
+      className={isSelected ? 'bg-gray-300 border-gray-700 border-2 outline-none focus:outline-none  mr-3 rounded-full px-5 py-2 inline-block font-medium text-gray-700' : 'bg-gray-700 outline-none focus:outline-none mr-3 rounded-full px-5 py-2 inline-block font-medium text-white'}
     >
       {text}
     </button>
@@ -42,17 +42,13 @@ export default function illustrations() {
         <Nav />
       </div>
       <div className="flex py-5  px-2 md:px-8  bg-white  shadow items-center overflow-x-scroll hide-scroll">
-        <div className="bg-gray-500  mr-3 rounded-full px-5 py-2 inline-block font-medium text-white">
-          {selectedCategory}
-        </div>
-        {categories.filter((category) => category !== selectedCategory)
-          .map((category) => (
-            <Pill
-              onClick={selectCategory}
-              text={category}
-              key={category}
-            />
-          ))}
+        {categories.map((category) => (
+          <Pill
+            onClick={selectCategory}
+            text={category}
+            isSelected={selectedCategory === category}
+          />
+        ))}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4 gap-4 px-2 md:px-8 mt-2 mb-2 md:mb-8 md:mt-8">
         {!data && (
@@ -70,9 +66,10 @@ export default function illustrations() {
         {data
           && data
             .filter((img) => img.category === selectedCategory)
+            // eslint-disable-next-line no-return-assign
             .map((img) => (
               <img
-                className="h-56 w-full bg-gray-400 rounded-lg"
+                className="h-56 img w-full bg-gray-400 rounded-lg"
                 src={`assets/${img.category}/${img.path}`}
                 alt={img.name}
                 key={img.id}
