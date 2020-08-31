@@ -104,14 +104,6 @@ export default function index() {
             value={value}
             onChange={(value) => handleSlider(value)}
           />
-          {/* <p>
-            n
-            <sup>th</sup>
-            {' '}
-            term :
-            {' '}
-            {value / step}
-          </p> */}
         </div>
       </div>
       <div className="mt-5 px-4">

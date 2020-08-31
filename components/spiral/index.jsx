@@ -5,6 +5,7 @@ import Range from '@atlaskit/range';
 import {
   Stage, Layer, Rect, Arc,
 } from 'react-konva';
+import FillColorButton from '../fillColorButton';
 
 export default function index() {
   const [value, setValue] = useState(0);
@@ -13,9 +14,46 @@ export default function index() {
   const [strokeColorClass, setStrokeColorClass] = useState('bg-neutral-brand');
   const [selectedStrokeColor, setSelectedStrokeColor] = useState('#FFF');
 
+  const fillColors = [
+    {
+      color: '#0077FF',
+      class: 'bg-blue-brand',
+    },
+    {
+      color: '#06CCFF',
+      class: 'bg-aqua-brand',
+    },
+    {
+      color: '#02CC89',
+      class: 'bg-green-brand',
+    },
+    {
+      color: '#FFBB03',
+      class: 'bg-yellow-brand',
+    },
+    {
+      color: '#844CFE',
+      class: 'bg-purple-brand',
+    },
+    {
+      color: '#FF3467',
+      class: 'bg-red-brand',
+    },
+    {
+      color: '#2B2B2B',
+      class: 'bg-black-brand',
+    },
+    {
+      color: '#F9FAFF',
+      class: 'bg-gray-300',
+    },
+  ];
+
   const fillColorClickHandler = (e) => {
-    setSelectedFillColor(e.target.getAttribute('data-color')); // for changing color in canvas
-    setFillColorClass(e.target.classList[2]); // for helper button which one is selected
+    // for changing color in canvas
+    setSelectedFillColor(e.target.getAttribute('data-color'));
+    // for helper button which one is selected
+    setFillColorClass(e.target.classList[2]);
   };
 
   const strokeColorClickHandler = (e) => {
@@ -23,7 +61,7 @@ export default function index() {
     setStrokeColorClass(e.target.classList[4]);
   };
 
-  const loop = () => {
+  const renderCanvas = () => {
     const strokeWidth = 3;
     const goldenRatio = 1.618;
     let side = 494;
@@ -55,7 +93,6 @@ export default function index() {
         yArc = y + side;
         rotation = 180;
       }
-      // Can be merged into but left to keep the code readable
       canvasElement.push(
         <React.Fragment key={i}>
           <Rect
@@ -97,22 +134,18 @@ export default function index() {
       } else if (dir === 4) {
         y -= nextNextSide;
       }
-      // console.table({ dir, x, y });
 
       unalteredSide /= goldenRatio;
     }
     return canvasElement;
   };
 
-  const rangeHandler = (value) => setValue(value);
   return (
     <div className="container mx-auto mb-12 md:mb-10 md:px-8">
       <div className="font-heading leading-10 text-3xl tracking-tight md:text-4xl font-semibold capitalize px-4 text-neutral">
         Golden
         {' '}
-        <span className="text-highlight">
-          Spiral
-        </span>
+        <span className="text-highlight">Spiral</span>
       </div>
       <div className="flex flex-col-reverse mt-5 md:flex-row">
         <div className="w-full hidden md:flex flex-col md:w-2/3 bg-gray-100  mr-2 font-semibold font-heading text-3xl border-gray-300 rounded border-2 text-neutral">
@@ -138,7 +171,7 @@ export default function index() {
                 stroke={selectedStrokeColor}
                 strokeWidth={3}
               />
-              {loop()}
+              {renderCanvas()}
             </Layer>
           </Stage>
         </div>
@@ -151,7 +184,7 @@ export default function index() {
             <Range
               step={10}
               value={value}
-              onChange={(value) => rangeHandler(value)}
+              onChange={(value) => setValue(value)}
             />
             <div className="flex flex-col font-medium text-base text-neutral">
               <div className="flex justify-between mb-2 items-center font-medium text-base text-neutral">
@@ -159,70 +192,13 @@ export default function index() {
                 <div className={`h-3 w-3 ${fillColorClass}`} />
               </div>
               <div className="grid grid-cols-6 gap-2">
-                <div
-                  onKeyPress={fillColorClickHandler}
-                  role="button"
-                  tabIndex="0"
-                  onClick={fillColorClickHandler}
-                  data-color="#0077FF"
-                  className="h-12 w-12 bg-blue-brand rounded"
-                />
-                <div
-                  onKeyPress={fillColorClickHandler}
-                  role="button"
-                  tabIndex="0"
-                  onClick={fillColorClickHandler}
-                  data-color="#06CCFF"
-                  className="h-12 w-12 bg-aqua-brand rounded"
-                />
-                <div
-                  onKeyPress={fillColorClickHandler}
-                  role="button"
-                  tabIndex="0"
-                  onClick={fillColorClickHandler}
-                  data-color="#02CC89"
-                  className="h-12 w-12 bg-green-brand rounded"
-                />
-                <div
-                  onKeyPress={fillColorClickHandler}
-                  role="button"
-                  tabIndex="0"
-                  onClick={fillColorClickHandler}
-                  data-color="#FFBB03"
-                  className="h-12 w-12 bg-yellow-brand rounded"
-                />
-                <div
-                  onKeyPress={fillColorClickHandler}
-                  role="button"
-                  tabIndex="0"
-                  onClick={fillColorClickHandler}
-                  data-color="#844CFE"
-                  className="h-12 w-12 bg-purple-brand rounded"
-                />
-                <div
-                  onKeyPress={fillColorClickHandler}
-                  role="button"
-                  tabIndex="0"
-                  onClick={fillColorClickHandler}
-                  data-color="#FF3467"
-                  className="h-12 w-12 bg-red-brand rounded"
-                />
-                <div
-                  onKeyPress={fillColorClickHandler}
-                  role="button"
-                  tabIndex="0"
-                  onClick={fillColorClickHandler}
-                  data-color="#F9FAFF"
-                  className="h-12 w-12 bg-gray-300 rounded"
-                />
-                <div
-                  onKeyPress={fillColorClickHandler}
-                  role="button"
-                  tabIndex="0"
-                  onClick={fillColorClickHandler}
-                  data-color="#2B2B2B"
-                  className="h-12 w-12 bg-black-brand rounded"
-                />
+                {fillColors.map((fillColor) => (
+                  <FillColorButton
+                    fillColorClickHandler={fillColorClickHandler}
+                    color={fillColor.color}
+                    colorClass={fillColor.class}
+                  />
+                ))}
               </div>
             </div>
             <div className="flex flex-col font-medium text-base text-neutral mt-3">
