@@ -194,6 +194,7 @@ export default function index() {
               <div className="grid grid-cols-6 gap-2">
                 {fillColors.map((fillColor) => (
                   <FillColorButton
+                    key={fillColor.color}
                     fillColorClickHandler={fillColorClickHandler}
                     color={fillColor.color}
                     colorClass={fillColor.class}

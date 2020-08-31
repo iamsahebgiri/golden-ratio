@@ -4,6 +4,7 @@ import Sets from '../components/sets';
 import Home from '../components/home';
 import Fibonacci from '../components/fibonacci';
 import Spiral from '../components/spiral';
+import Footer from '../components/footer';
 
 export default function IndexPage() {
   return (
@@ -81,6 +82,7 @@ export default function IndexPage() {
       </Section>
       <Fibonacci />
       <Spiral />
+      <Footer />
     </div>
   );
 }
