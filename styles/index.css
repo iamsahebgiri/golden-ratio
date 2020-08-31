@@ -38,6 +38,14 @@
   font-variant-numeric: tabular-nums;
 }
 
+.animation-fade-in {
+  animation: fadeIn ease 2s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
 /* Start purging... */
 @tailwind utilities;
 /* Stop purging. */
