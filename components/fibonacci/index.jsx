@@ -1,30 +1,46 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-param-reassign */
 /* eslint-disable no-shadow */
 import React, { useState } from 'react';
 import Range from '@atlaskit/range';
 
 export default function index() {
-  const [value, setValue] = useState(3);
-  const [prevTerm, setPrevTerm] = useState(1);
-  const [nextTerm, setNextTerm] = useState(1);
-  const [goldenRatio, setGoldenRatio] = useState(1);
+  // default value for slider
+  const [value, setValue] = useState(0);
+  // actual fibonacci terms
+  const [prevTerm, setPrevTerm] = useState(0);
+  const [term, setTerm] = useState(0);
+  const [ratio, setRatio] = useState(0);
 
-  const step = 3;
+  // for calculating previous term without recalculating
+  const FibonacciArr = [0, 1];
 
-  function fibonacci(num) {
-    if (num === 0) return 0;
-    if (num === 1) return 0;
-    if (num === 2) return 1;
-    return fibonacci(num - 1) + fibonacci(num - 2);
+  // optimized through memeoization as in dp instead of regular recursion
+  function FibonacciMemoized(n, arr) {
+    if (n === 0 || n === 1) {
+      return n;
+    }
+    if (arr[n] !== undefined) {
+      return arr[n];
+    }
+    // console.log('calculating...', n);
+    const fib1 = FibonacciMemoized(n - 1, arr);
+    const fib2 = FibonacciMemoized(n - 2, arr);
+    const fib = fib1 + fib2;
+
+    FibonacciArr[n] = fib;
+
+    arr[n] = fib;
+    return fib;
   }
 
-  function calculateFibonacciRatio(value) {
-    setValue(value);
-    if (value !== 0) {
-      setPrevTerm(fibonacci(value / step));
-      setNextTerm(fibonacci(value / step - 1));
-      const requiredRatio = prevTerm / nextTerm;
-      setGoldenRatio(requiredRatio);
-    }
+  function handleSlider(val) {
+    setValue(val);
+    const arr = new Array(val + 1);
+
+    setTerm(FibonacciMemoized(val, arr));
+    setPrevTerm(FibonacciArr[val - 1]);
+    setRatio(FibonacciArr[val] / FibonacciArr[val - 1]);
   }
 
   return (
@@ -57,24 +73,36 @@ export default function index() {
             </div>
             <div>
               <div>{prevTerm}</div>
-              <div>{nextTerm}</div>
+              <div>{term}</div>
             </div>
           </div>
 
           <div className="text-right">
             <hr />
-            {goldenRatio}
+            {ratio}
           </div>
         </div>
         <div className="w-full mt-2 md:mt-0 p-4 md:w-1/3 border-gray-300 rounded border-2 bg-gray-100">
           <div className="flex justify-between font-medium text-base text-neutral">
-            <p>Slider</p>
+            <p>
+              nth Term
+            </p>
+            <p>{term}</p>
+          </div>
+          <div className="flex justify-between font-medium text-base text-neutral">
+            <p>
+              n-1 th Term
+            </p>
+            <p>{prevTerm}</p>
+          </div>
+          <div className="flex justify-between font-medium text-base text-neutral">
+            <p>n</p>
             <p>{value}</p>
           </div>
           <Range
-            step={step}
+            step={1}
             value={value}
-            onChange={(value) => calculateFibonacciRatio(value)}
+            onChange={(value) => handleSlider(value)}
           />
           {/* <p>
             n

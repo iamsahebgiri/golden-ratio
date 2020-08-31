@@ -32,8 +32,7 @@ export default function Facts() {
             <RiQuestionFill color="#000" size="32" />
           </div>
           <p className="font-serif text-lg">
-            Phi is the only number whose square is greater than itself by one,
-            expressed mathematically as Φ² = Φ + 1 = 2.618.
+            The Golden Ratio is also equal to 2 × sin(54°), interesting isn&apos;t it?
           </p>
         </div>
       </div>

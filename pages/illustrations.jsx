@@ -72,6 +72,7 @@ export default function illustrations() {
             .filter((img) => img.category === selectedCategory)
             .map((img) => (
               <img
+                className="h-56 w-full bg-gray-400 rounded-lg"
                 src={`assets/${img.category}/${img.path}`}
                 alt={img.name}
                 key={img.id}
