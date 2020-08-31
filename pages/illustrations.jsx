@@ -68,14 +68,13 @@ export default function illustrations() {
           && data
             .filter((img) => img.category === selectedCategory)
             .map((img) => (
-              <div className="flex items-center justify-center bg-gray-400 rounded-lg">
+              <div key={img.id} className="flex items-center justify-center bg-gray-400 rounded-lg">
                 <img
                   loading="lazy"
                   className="rounded-lg animation-fade-in"
                   src={`assets/${img.category}/${img.path}`}
                   alt={img.name}
                   title={img.name}
-                  key={img.id}
                 />
               </div>
             ))}
