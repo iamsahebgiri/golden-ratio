@@ -51,7 +51,7 @@ export default function illustrations() {
         ))}
       </div>
       {/* grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4 gap-4  */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-2 md:px-8 mt-2 mb-2 md:mb-8 md:mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-2 md:px-8 my-2 md:py-8">
         {!data && (
         <>
           <div className="h-56 animate-pulse w-full bg-gray-400 rounded-lg" />
