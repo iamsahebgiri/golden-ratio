@@ -17,7 +17,7 @@ export default function index() {
         </div>
       </div>
       <div className="w-full flex items-center justify-center py-4">
-        <FiChevronDown className="animate-bounce" color="#FFF" size="48" />
+        <FiChevronDown className="animate-bounce z-0" color="#FFF" size="48" />
       </div>
     </div>
   );
