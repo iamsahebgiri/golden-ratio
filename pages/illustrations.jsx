@@ -44,6 +44,7 @@ export default function illustrations() {
       <div className="flex py-5  px-2 md:px-8  bg-white  shadow items-center overflow-x-scroll hide-scroll">
         {categories.map((category) => (
           <Pill
+            key={category}
             onClick={selectCategory}
             text={category}
             isSelected={selectedCategory === category}
