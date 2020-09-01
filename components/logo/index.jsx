@@ -5,7 +5,7 @@ export default function index() {
   return (
     <Link href="/">
       <a aria-label="Navigate Home" href="/">
-        <div className="h-10 shadow-sm px-6 bg-white font-bold text-xl rounded-lg flex items-center justify-center">
+        <div className="h-10 px-6 bg-white font-bold text-xl rounded-lg flex items-center justify-center">
           <span className="text-highlight">
             Golden
           </span>
