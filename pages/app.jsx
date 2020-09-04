@@ -5,7 +5,7 @@ import Logo from '../components/logo';
 export default function credits() {
   return (
     <div className="bg-gray-100 h-screen flex flex-col justify-between">
-      <div className="bg-white shadow flex items-center justify-between px-2 py-4">
+      <div className="bg-gray-800 border-b-2 flex items-center justify-between px-2 py-3">
         <Link href="/">
           <a href="/">
             <div className="bg-gray-200 md:ml-5 rounded-full px-5 py-1 inline-block font-medium">
@@ -20,14 +20,11 @@ export default function credits() {
           Save
         </div>
       </div>
-      <div className="flex flex-col justify-between h-full">
-        <div className="flex flex-col items-center justify-center h-full">
-          <div className="canvas h-64 w-11/12 bg-gray-400 mx-auto rounded" />
-        </div>
-        <div>
-          <div className="sidebar" />
+      <div className="grid grid-rows-6 grid-cols-10 grid-flow-col gap-4 h-full">
 
-        </div>
+        <div className="row-span-5 col-span-8 md:h-full bg-gray-300" />
+        <div className="row-span-1 col-span-8 md:h-full bg-gray-400" />
+        <div className="row-span-6 col-span-2 md:h-full bg-white" />
       </div>
     </div>
   );
