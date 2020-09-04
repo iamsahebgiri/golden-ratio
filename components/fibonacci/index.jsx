@@ -106,21 +106,33 @@ export default function index() {
           />
         </div>
       </div>
-      <div className="mt-5 px-4">
-        <span className="text-highlight font-semibold"> Inference </span>
-        <p className="text-neutral">
-          The Fibonacci sequence, also a plot element in “The Da Vinci Code,”
-          provides yet another way to derive Phi mathematically. The series is
-          quite simple. Start with 0 and add 1 to get 1. Then repeat the process
-          of adding each two numbers in the series to determine the next one: 0,
-          1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, and so on. This
-          pattern is also found in the diagonals of Pascal’s Triangle. The
-          relationship to the Golden Ratio or Phi is found by dividing each
-          number by the one before it. The further you go in the series, the
-          closer the result gets to Phi. If you go further into the series and
-          you’ll find that 233/144 = 1.61805, a very close approximation of Phi,
-          which to ten decimal places is 1.6180339887.
-        </p>
+
+      <div className="container mx-auto mt-3 mb-12 md:mb-10">
+        <div className="font-heading leading-10 tracking-tight text-lg font-semibold capitalize px-4 text-neutral">
+          <span className="text-highlight font-semibold"> Inference </span>
+        </div>
+        <div className="flex flex-col-reverse md:flex-row">
+          <div className="w-full px-4  md:w-4/6  md:m-0 text-neutral">
+            <p className="text-neutral">
+              The Fibonacci sequence, also a plot element in “The Da Vinci Code,”
+              provides yet another way to derive Phi mathematically. The series is
+              quite simple. Start with 0 and add 1 to get 1. Then repeat the process
+              of adding each two numbers in the series to determine the next one: 0,
+              1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, and so on. This
+              pattern is also found in the diagonals of Pascal’s Triangle. The
+              relationship to the Golden Ratio or Phi is found by dividing each
+              number by the one before it. The further you go in the series, the
+              closer the result gets to Phi. If you go further into the series and
+              you’ll find that 233/144 = 1.61805, a very close approximation of Phi,
+              which to ten decimal places is 1.6180339887.
+            </p>
+          </div>
+          <div className="w-full px-4 md:w-2/6">
+            <div className="max-h-full bg-blue-brand rounded-lg">
+              <img className="rounded-lg" src="./golden_ratio_fibonacci_inf.jpg" alt="Golden Raio" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
