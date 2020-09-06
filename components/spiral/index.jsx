@@ -6,9 +6,13 @@ import {
   Stage, Layer, Rect, Arc,
 } from 'react-konva';
 import FillColorButton from '../fillColorButton';
+import useCanvasSize from '../../utils/useCanvasSize';
 
 export default function index() {
+  // value for slider
   const [value, setValue] = useState(0);
+  // get current height and width of the window for reponsive canvas
+  const [canvasWidth, canvasHeight] = useCanvasSize();
   const [fillColorClass, setFillColorClass] = useState('bg-blue-brand');
   const [selectedFillColor, setSelectedFillColor] = useState('#0077FF');
   const [strokeColorClass, setStrokeColorClass] = useState('bg-neutral-brand');
@@ -50,9 +54,9 @@ export default function index() {
   ];
 
   const fillColorClickHandler = (e) => {
-    // for changing color in canvas
+    // change background color of canvas
     setSelectedFillColor(e.target.getAttribute('data-color'));
-    // for helper button which one is selected
+    // current selected color
     setFillColorClass(e.target.classList[2]);
   };
 
@@ -64,15 +68,38 @@ export default function index() {
   const renderCanvas = () => {
     const strokeWidth = 3;
     const goldenRatio = 1.618;
-    let side = 494;
-    let unalteredSide = 494;
-    let x = 497;
-    let y = 3;
+    let side = canvasHeight - (2 * strokeWidth);
+    let unalteredSide = side;
+    let x = side + strokeWidth;
+    let y = strokeWidth;
     let xArc = x;
     let yArc = y;
     let dir = 1;
     let rotation = 270;
-    const canvasElement = [];
+    const canvasElement = [
+      <React.Fragment key={0}>
+        <Rect
+          x={strokeWidth}
+          y={strokeWidth}
+          height={side}
+          width={side}
+          stroke={selectedStrokeColor}
+          fill={selectedFillColor}
+          strokeWidth={strokeWidth}
+        />
+        <Arc
+          x={side + strokeWidth}
+          y={side + strokeWidth}
+          innerRadius={side}
+          outerRadius={side}
+          angle={90}
+          rotation={180}
+          fill="#0077FF"
+          stroke={selectedStrokeColor}
+          strokeWidth={strokeWidth}
+        />
+      </React.Fragment>,
+    ];
 
     for (let i = 0; i < Math.round(value / 10); i += 1) {
       side /= goldenRatio;
@@ -94,7 +121,7 @@ export default function index() {
         rotation = 180;
       }
       canvasElement.push(
-        <React.Fragment key={i}>
+        <React.Fragment key={i + 1}>
           <Rect
             x={x}
             y={y}
@@ -148,34 +175,12 @@ export default function index() {
         <span className="text-highlight">Spiral</span>
       </div>
       <div className="flex flex-col-reverse mt-5 md:flex-row">
-        <div className="w-full hidden md:flex flex-col md:w-2/3 bg-gray-100  mr-2 font-semibold font-heading text-3xl border-gray-300 rounded border-2 text-neutral">
-          <Stage width={809} height={500}>
-            <Layer>
-              <Rect
-                x={3}
-                y={3}
-                height={494}
-                width={494}
-                stroke={selectedStrokeColor}
-                fill={selectedFillColor}
-                strokeWidth={3}
-              />
-              <Arc
-                x={497}
-                y={497}
-                innerRadius={494}
-                outerRadius={494}
-                angle={90}
-                rotation={180}
-                fill="#0077FF"
-                stroke={selectedStrokeColor}
-                strokeWidth={3}
-              />
-              {renderCanvas()}
-            </Layer>
+        <div className="ml-4 mt-4 md:mt-0 md:flex flex-col md:w-2/3 bg-gray-100 font-semibold font-heading text-3xl border-gray-300 rounded border-2 text-neutral">
+          <Stage width={canvasWidth} height={canvasHeight}>
+            <Layer>{renderCanvas()}</Layer>
           </Stage>
         </div>
-        <div className="w-full px-4 md:w-2/6">
+        <div className="w-full md:w-1/3 px-4">
           <div className="p-4 border-gray-300 rounded border-2 bg-gray-100">
             <div className="flex justify-between font-medium text-base text-neutral">
               <p>Slider</p>
