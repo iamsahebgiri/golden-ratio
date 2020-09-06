@@ -100,6 +100,7 @@ export default function index() {
             <p>{value}</p>
           </div>
           <Range
+            min={1}
             step={1}
             value={value}
             onChange={(value) => handleSlider(value)}
