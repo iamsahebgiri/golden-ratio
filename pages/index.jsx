@@ -17,19 +17,31 @@ export default function IndexPage() {
         imgSrc="./golden_ratio.png"
       >
         <p className="mb-4 leading-relaxed">
-          What makes a single number so interesting that ancient Greeks,
-          Renaissance artists, a 17th century astronomer and a 21st century
-          novelist all would write about it?
+          What makes a single number so interesting that nearly everyone from
+          scientist to the artist would write about it? What is so special about
+          the golden ratio?
         </p>
-        <p className="leading-relaxed">
-          The Golden Ratio is a mathematical ratio. It is commonly found in
-          nature, and when used in a design, it fosters organic and
-          natural-looking compositions that are aesthetically pleasing to the
-          eye. It’s a number that goes by many names. This “golden” number,
-          1.61803399, represented by the Greek letter Phi, is known as the
-          Golden Ratio, Golden Number, Golden Proportion, Golden Mean, Golden
-          Section, Divine Proportion and Divine Section.
+        <p className="mb-4 leading-relaxed">
+          This golden number, 1.61803399, represented by the Greek letter Phi,
+          is known as the Golden Ratio.
         </p>
+        <p className="mb-4 leading-relaxed">
+          It goes by many names, golden mean, divine proportions, golden
+          section, etc. which implies that it has been discovered and
+          rediscovered many times throughout history. Egyptians used both pi and
+          phi in the design of the Great Pyramids. Da Vinci’s The Last Supper
+          was based on the Golden Ratio. Not only Da Vinci but Michelangelo,
+          Raphael, Botticelli, Burne Jones and many more have used the golden
+          ratio to bring harmony and balance in art and design.
+        </p>
+        {/* <p className="mb-4 leading-relaxed">
+          It was first called the “Divine Proportion” in the 1500s by Luca
+          Pacioli in his dissertation “De Divina Proportione”. It is believed
+          that Martin Ohm (1792–1872) was the first person to use the term
+          “golden” to describe the golden ratio. It wasn’t until the 1900s that
+          American mathematician Mark Barr used the Greek letter phi (Φ) to
+          designate this proportion.
+        </p> */}
       </Section>
       <Sets />
       <Section
@@ -58,6 +70,7 @@ export default function IndexPage() {
           <img src="./eqs/eq_3.svg" alt="Equation one" />
         </p> */}
       </Section>
+      <Fibonacci />
       <Facts />
       <Section
         leadingTitle="Golden Spiral and"
@@ -80,7 +93,6 @@ export default function IndexPage() {
           phi proportions.
         </p>
       </Section>
-      <Fibonacci />
       <Spiral />
       <Footer />
     </div>
