@@ -45,12 +45,12 @@ export default function index() {
 
   return (
     <div className="container mx-auto mb-12 md:mb-10 md:px-8">
-      <div className="font-heading leading-10 mb-8 text-3xl md:text-4xl font-semibold capitalize px-4 text-neutral">
+      <div className="font-heading leading-10 mb-8 text-3xl md:text-4xl font-semibold capitalize px-4 text-neutral md:px-0">
         Golden Ratio From
         <span className="text-highlight"> Fibonacci </span>
         Sequence
       </div>
-      <div className="px-4 flex flex-col md:flex-row ">
+      <div className="px-4 md:px-0 flex flex-col md:flex-row ">
         <div className="w-full flex flex-col p-4 md:w-2/3 bg-gray-100  mr-2 font-semibold font-heading text-3xl border-gray-300 rounded border-2 text-neutral">
           <div className="flex items-center justify-between">
             <div>
@@ -108,12 +108,9 @@ export default function index() {
         </div>
       </div>
 
-      <div className="container mx-auto mt-3 mb-12 md:mb-10">
-        <div className="font-heading leading-10 tracking-tight text-lg font-semibold capitalize px-4 text-neutral">
-          <span className="text-highlight font-semibold"> Inference </span>
-        </div>
+      <div className="container mx-auto mt-8 mb-12 md:mb-10">
         <div className="flex flex-col-reverse md:flex-row">
-          <div className="w-full px-4  md:w-4/6  md:m-0 text-neutral">
+          <div className="w-full px-4 md:px-0 md:w-4/6  md:m-0 text-neutral">
             <p className="text-neutral">
               From the experiment above we come to know that dividing subsequent terms of Fibonacci
               sequence results in the golden ratio. The further you go in the series, the
@@ -122,7 +119,7 @@ export default function index() {
               which to ten decimal places is 1.6180339887.
             </p>
           </div>
-          <div className="w-full px-4 md:w-2/6">
+          <div className="w-full px-4 md:pl-4 md:pr-0 md:w-2/6">
             <div className="max-h-full bg-blue-brand rounded-lg">
               <img className="rounded-lg" src="./golden_ratio_fibonacci_inf.jpg" alt="Golden Raio" />
             </div>
