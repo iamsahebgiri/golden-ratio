@@ -169,18 +169,18 @@ export default function index() {
 
   return (
     <div className="container mx-auto mb-12 md:mb-10 md:px-8">
-      <div className="font-heading leading-10 text-3xl tracking-tight md:text-4xl font-semibold capitalize px-4 text-neutral">
+      <div className="font-heading leading-10 text-3xl tracking-tight md:text-4xl font-semibold capitalize px-4 md:p-0 text-neutral">
         Golden
         {' '}
         <span className="text-highlight">Spiral</span>
       </div>
       <div className="flex flex-col-reverse mt-5 md:flex-row">
-        <div className="mx-4 md:mr-0 mt-4 md:mt-0 md:flex flex-col md:w-2/3 bg-gray-100 font-semibold font-heading text-3xl border-gray-300 rounded border-2 text-neutral">
+        <div className="mx-4 md:mx-0 md:mr-0 mt-4 md:mt-0 md:flex flex-col md:w-2/3 bg-gray-100 font-semibold font-heading text-3xl border-gray-300 rounded border-2 text-neutral">
           <Stage width={canvasWidth} height={canvasHeight}>
             <Layer>{renderCanvas()}</Layer>
           </Stage>
         </div>
-        <div className="w-full md:w-1/3 px-4">
+        <div className="w-full md:w-1/3 px-4 md:p-0 md:pl-4">
           <div className="p-4 border-gray-300 rounded border-2 bg-gray-100">
             <div className="flex justify-between font-medium text-base text-neutral">
               <p>Slider</p>
