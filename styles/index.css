@@ -38,6 +38,21 @@
   font-variant-numeric: tabular-nums;
 }
 
+.color-picker{
+  border-radius: 0.25rem;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.color-picker::-webkit-color-swatch-wrapper {
+  padding: 0;	
+}
+.color-picker::-webkit-color-swatch {
+  border: none;
+  border-radius: 0.25rem;
+}
+
 .animation-fade-in {
   animation: fadeIn ease 2s;
 }
