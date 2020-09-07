@@ -4,6 +4,7 @@ import Sets from '../components/sets';
 import Home from '../components/home';
 import Fibonacci from '../components/fibonacci';
 import Spiral from '../components/spiral';
+// import Sunflower from '../components/sunflower';
 import Footer from '../components/footer';
 
 export default function IndexPage() {
@@ -16,16 +17,13 @@ export default function IndexPage() {
         trailingTitle=""
         imgSrc="./golden_ratio.png"
       >
-        <p className="mb-4 leading-relaxed">
+        <p className="mb-4 leading-6">
           What makes a single number so interesting that nearly everyone from
           scientist to the artist would write about it? What is so special about
-          the golden ratio?
-        </p>
-        <p className="mb-4 leading-relaxed">
-          This golden number, 1.61803399, represented by the Greek letter Phi,
+          the golden ratio? This golden number, 1.61803399, represented by the Greek letter Phi,
           is known as the Golden Ratio.
         </p>
-        <p className="mb-4 leading-relaxed">
+        <p className="mb-4 leading-6">
           It goes by many names, golden mean, divine proportions, golden
           section, etc. which implies that it has been discovered and
           rediscovered many times throughout history. Egyptians used both pi and
@@ -34,7 +32,7 @@ export default function IndexPage() {
           Raphael, Botticelli, Burne Jones and many more have used the golden
           ratio to bring harmony and balance in art and design.
         </p>
-        {/* <p className="mb-4 leading-relaxed">
+        {/* <p className="mb-4 leading-6">
           It was first called the “Divine Proportion” in the 1500s by Luca
           Pacioli in his dissertation “De Divina Proportione”. It is believed
           that Martin Ohm (1792–1872) was the first person to use the term
@@ -50,14 +48,14 @@ export default function IndexPage() {
         trailingTitle=""
         imgSrc="./golden_ratio_math.png"
       >
-        <p className="mb-4">
+        <p className="mb-4 leading-6">
           This Golden Ratio truly is unique in its mathematical properties and
           pervasive in its appearance throughout nature. Where Pi (3.14) is the
           ratio of the circumference of a circle to its diameter, Phi or Φ
           (1.618) is the Golden Ratio that results when a line is divided in one
           very special and unique way.
         </p>
-        <p className="mb-4">
+        <p className="mb-4 leading-6">
           Two quantities are in the golden ratio if their ratio is the same as
           the ratio of their sum to the larger of the two quantities. The
           irrational number (1 + √5)/2, often denoted by the Greek letter ϕ or
@@ -78,7 +76,7 @@ export default function IndexPage() {
         trailingTitle=""
         imgSrc="./golden_ratio_nature.png"
       >
-        <p className="mb-4">
+        <p className="mb-4 leading-6">
           There are many other fascinating mathematical relationships and
           oddities in both Phi and the Fibonacci series that can be explored in
           more depth, but for now let’s now take a step away from the purely
@@ -93,6 +91,7 @@ export default function IndexPage() {
           phi proportions.
         </p>
       </Section>
+      {/* <Sunflower /> */}
       <Spiral />
       <Footer />
     </div>
