@@ -168,7 +168,7 @@ export default function index() {
   };
 
   return (
-    <div className="container mx-auto mb-12 md:mb-10 md:px-8">
+    <div className="container mx-auto mb-12 md:mb-16 md:px-8">
       <div className="font-heading leading-10 text-3xl tracking-tight md:text-4xl font-semibold capitalize px-4 md:p-0 text-neutral">
         Golden
         {' '}
