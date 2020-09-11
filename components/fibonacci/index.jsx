@@ -44,7 +44,7 @@ export default function index() {
   }
 
   return (
-    <div className="container mx-auto mb-12 md:mb-10 md:px-8">
+    <div className="container mx-auto mb-12 md:mb-20 md:px-8">
       <div className="font-heading leading-10 mb-8 text-3xl md:text-4xl font-semibold capitalize px-4 text-neutral md:px-0">
         Golden Ratio From
         <span className="text-highlight"> Fibonacci </span>
@@ -72,8 +72,8 @@ export default function index() {
               </svg> */}
             </div>
             <div>
-              <div>{prevTerm}</div>
               <div>{term}</div>
+              <div>{prevTerm}</div>
             </div>
           </div>
 
@@ -108,7 +108,7 @@ export default function index() {
         </div>
       </div>
 
-      <div className="container mx-auto mt-8 mb-12 md:mb-10">
+      <div className="container mx-auto mt-8 mb-12 md:mb-20">
         <div className="flex flex-col-reverse md:flex-row">
           <div className="w-full px-4 md:px-0 md:w-4/6  md:m-0 text-neutral">
             <p className="text-neutral">
@@ -117,6 +117,13 @@ export default function index() {
               closer the result gets to Phi. If you go further into the series and
               you’ll find that 233/144 = 1.61805, a very close approximation of Phi,
               which to ten decimal places is 1.6180339887.
+            </p>
+            <p className="mb-4">
+              Golden Ratio can be written in many forms. Here are few of them
+              <span className="flex flex-col md:flex-row">
+                <img className="mt-3 md:mr-8" src="./eqs/eq_1.svg" alt="Equation one" />
+                <img className="mt-3" src="./eqs/eq_3.svg" alt="Equation one" />
+              </span>
             </p>
           </div>
           <div className="w-full px-4 md:pl-4 md:pr-0 md:w-2/6">
