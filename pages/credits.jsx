@@ -1,9 +1,10 @@
 import React from 'react';
+import Nav from '../components/nav';
 
 export default function credits() {
   return (
-    <div>
-      <h1>Credits</h1>
+    <div className="bg-gray-800">
+      <Nav />
     </div>
   );
 }
