@@ -20,12 +20,10 @@ export default function illustrations() {
     'Logos',
     'Beauty',
     'Architecture',
-    'Cars',
-    'Space',
-    'Marketing',
-    'Design',
-    'Theology',
-    'Cosmos',
+    'Art',
+    'Fractal',
+    'Nature',
+    'Others'
   ];
   const [selectedCategory, setSelectedCategory] = useState('Logos');
 
