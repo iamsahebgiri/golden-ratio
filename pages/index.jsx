@@ -4,7 +4,7 @@ import Sets from '../components/sets';
 import Home from '../components/home';
 import Fibonacci from '../components/fibonacci';
 import Spiral from '../components/spiral';
-// import Sunflower from '../components/sunflower';
+import Sunflower from '../components/sunflower';
 import Footer from '../components/footer';
 
 export default function IndexPage() {
@@ -91,7 +91,7 @@ export default function IndexPage() {
           phi proportions.
         </p>
       </Section>
-      {/* <Sunflower /> */}
+      <Sunflower />
       <Spiral />
       <Footer />
     </div>
