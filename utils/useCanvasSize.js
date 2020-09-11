@@ -8,5 +8,5 @@ export default function useCanvasSize() {
   // xl - 1280px
   if (width > 1280) return [809, 500];
   // sm - 640px
-  return [340, 202];
+  return [326, 202];
 }
