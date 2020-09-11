@@ -4,9 +4,9 @@ export default function Facts() {
   return (
     <div className="container mx-auto mb-12 md:mb-16 md:px-8">
       <div className="font-heading leading-tight text-3xl md:text-4xl font-semibold capitalize px-4 md:p-0  text-neutral">
-        Interesting
-        <span className="text-highlight"> Facts </span>
-        about Phi
+        Did you
+        <span className="text-highlight"> know </span>
+        ?
       </div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 px-4 md:p-0 mt-8">
         <div className="p-5 pb-8 bg-red-brand rounded-lg">
