@@ -13,9 +13,8 @@ export default function index() {
   return (
     <div className="container mx-auto mb-12 md:mb-16 md:px-8">
       <div className="font-heading leading-10 text-3xl md:text-4xl font-semibold capitalize text-neutral px-4 md:p-0">
-        Frequently used
+        Most frequently used
         <span className="text-highlight"> Ratio </span>
-        Sets
       </div>
       <div className="grid grid-cols-2 gap-y-6 xl:gap-0 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 mt-8">
         <SetBox name="Square" img="square.png" />
