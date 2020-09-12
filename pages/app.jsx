@@ -250,7 +250,7 @@ export default function credits() {
           </Stage>
         </div>
         <div className="bg-white shadow-sm sm:w-full md:w-1/2 mx-4 my-3 md:my-0 md:mx-2 p-2">
-          <div className="text-center flex">
+          <div className="text-center flex bg-gray-100 cursor-pointer">
             <label
               className="p-2 border-2 border-dashed w-full"
               htmlFor="custom_image"
@@ -355,7 +355,28 @@ export default function credits() {
                 </button>
               </span>
             </>
-          ) : null}
+          )
+            : (
+              <div className="flex flex-col items-center justify-center px-4">
+                <img src="./icons/edit_img.png" alt="Information" />
+                <h2 className="font-semibold text-xl">Instructions</h2>
+                <p className="mb-3 mt-3 text-sm">
+                  Click or drag the image or the icon to add it to the canvas.
+                </p>
+                <p className="mb-3 text-sm">
+                  Once added, click on the image on the canvas to get more options.
+                </p>
+                <p className="mb-3 text-sm">
+                  To deselect click, anywhere on canvas other then the image.
+                </p>
+                <p className="mb-3 text-sm">
+                  Try adding your own images and find golden ratio in them.
+                </p>
+                <p className="mb-3 text-sm">
+                  Now that you have edited your image, try to save it.
+                </p>
+              </div>
+            )}
         </div>
       </div>
     </div>
