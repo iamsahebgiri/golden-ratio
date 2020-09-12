@@ -8,7 +8,7 @@ function Pill({ text, onClick, isSelected }) {
     <button
       type="button"
       onClick={onClick}
-      className={isSelected ? 'bg-gray-400 border-gray-700 border-2 outline-none focus:outline-none  mr-3 rounded-full px-5 py-2 inline-block font-medium text-gray-700' : 'bg-gray-700 outline-none focus:outline-none mr-3 rounded-full px-5 py-2 inline-block font-medium text-white'}
+      className={isSelected ? 'bg-gray-700 outline-none focus:outline-none mr-3 rounded-full px-5 py-2 inline-block font-medium border-2 border-gray-700 text-white' : 'bg-gray-300 border-gray-700 border-2 outline-none focus:outline-none  mr-3 rounded-full px-5 py-2 inline-block font-medium text-gray-700'}
     >
       {text}
     </button>
@@ -23,7 +23,7 @@ export default function illustrations() {
     'Art',
     'Fractal',
     'Nature',
-    'Others'
+    'Others',
   ];
   const [selectedCategory, setSelectedCategory] = useState('Logos');
 
