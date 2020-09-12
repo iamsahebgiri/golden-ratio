@@ -42,7 +42,7 @@ export default function credits() {
         </ul>
       </div>
 
-      <div className="p-2 md:px-8">
+      <div className="p-2 md:px-8 mb-8">
         <div className="font-heading leading-10 text-3xl md:text-4xl mb-2 tracking-tight font-semibold capitalize px-4 md:p-0 text-neutral">
           <span className="text-highlight">
             Bibliography
