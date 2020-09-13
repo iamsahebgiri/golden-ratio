@@ -1,3 +1,37 @@
 # Golden Ratio
 
-What makes a single number so interesting that ancient Greeks, Renaissance artists, a 17th century astronomer and a 21st century novelist all would write about it? It's a number that goes by many names. This “golden” number, 1.61803399, represented by the Greek letter Phi, is known as the Golden Ratio, Golden Number, Golden Proportion, Golden Mean, Golden Section, Divine Proportion and Divine Section. 
+This project was built using Next js.
+
+## Setup in local environment
+
+### Clone the repo
+`git clone https://github.com/iamsahebgiri/golden-ratio`<br>
+This will obtain a copy of the repository.
+
+### Install Packages
+`npm install`<br>
+Required packages will be downloaded in a folder called node_modules
+
+### Run the application
+`npm run dev`<br>
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## Other Available Scripts
+
+In the project directory, you can run:
+
+### Update Data.json
+
+`npm run getAssets` <br>
+This command updates the data.json file in the pulic directory. This an automated task to generate images info built using node.js.
+
+### Build the project for production
+
+`npm run build` <br>
+This command will build required assets to run on client side. 
+
+### Run server after build
+
+`npm run start` <br>
+This command will run the project after the sucessful built.
