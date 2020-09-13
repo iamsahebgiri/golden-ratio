@@ -2,7 +2,7 @@
 
 This project was built using Next js.
 
-## Setup in local environment
+## Setup in the local environment
 
 ### Clone the repo
 `git clone https://github.com/iamsahebgiri/golden-ratio`<br>
@@ -24,14 +24,14 @@ In the project directory, you can run:
 ### Update Data.json
 
 `npm run getAssets` <br>
-This command updates the data.json file in the pulic directory. This an automated task to generate images info built using node.js.
+This command updates the data.json file in the public directory. This an automated task to generate images info built using node.js.
 
 ### Build the project for production
 
 `npm run build` <br>
-This command will build required assets to run on client side. 
+This command will build the required assets to run on client-side. 
 
 ### Run server after build
 
 `npm run start` <br>
-This command will run the project after the sucessful built.
+This command will run the project after the successful build.
